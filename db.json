@@ -1,0 +1,62 @@
+{
+  "userData": [
+    {
+      "userData": {
+        "name": "",
+        "email": "",
+        "number": "",
+        "age": "",
+        "gender": "",
+        "file": "",
+        "votes": 11
+      },
+      "id": 1
+    },
+    {
+      "userData": {
+        "name": "sahil",
+        "email": "f",
+        "number": 2424,
+        "age": 131,
+        "file": "C:\\fakepath\\home.png",
+        "votes": 2
+      },
+      "id": 2
+    },
+    {
+      "userData": {
+        "name": "sahil",
+        "email": "asas@gmail.com",
+        "number": 8320225810,
+        "age": 20,
+        "file": "C:\\fakepath\\bell.png",
+        "votes": 1
+      },
+      "id": 3
+    },
+    {
+      "userData": {
+        "name": "",
+        "email": "",
+        "number": "",
+        "age": "",
+        "gender": "",
+        "file": "",
+        "votes": 9
+      },
+      "id": 4
+    },
+    {
+      "userData": {
+        "name": "sahill",
+        "email": "sasf@gmail.com",
+        "number": 555,
+        "age": 1234,
+        "gender": "male",
+        "file": "C:\\fakepath\\learning.png",
+        "votes": 1
+      },
+      "id": 5
+    }
+  ]
+}

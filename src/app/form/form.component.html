@@ -1,0 +1,24 @@
+<div class="form">
+    <form #myFormData="ngForm">
+        <h1>Register</h1>
+        <input type="text" placeholder="Enter Your Name" ngModel name="name">
+        <input type="email" placeholder="Enter Your Email" ngModel name="email">
+        <input type="number" placeholder="Enter Your Mobile Number" ngModel name="number">
+        <input type="number" name="age" id="age" placeholder="Enter Your Age" ngModel name="age">
+        <div class="gender">
+            <label for="male">
+                <p>Male</p>
+                <input type="radio" id="male" ngModel name="gender" value="male">
+            </label>
+            <label for="female">
+                <p>Female</p>
+                <input type="radio" id="female" ngModel name="gender" value="female">
+            </label>
+        </div>
+        <input type="file" name="image" id="image" ngModel name="file">
+        <div class="btns">
+            <button>Cancel</button>
+            <button (click)="addData(myFormData.value)">Add Data</button>
+        </div>
+    </form>
+</div>

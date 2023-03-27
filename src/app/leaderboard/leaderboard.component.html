@@ -1,0 +1,12 @@
+
+<ejs-grid [dataSource]="tempdata" #grid>
+    <e-columns>
+        <e-column field='id' headerText='No.' textAlign='center' width=50></e-column>
+        <e-column field='userData.name' headerText='Name' textAlign='center' width=50></e-column>
+        <e-column field='userData.age' headerText='Age' textAlign='center' width=50></e-column>
+        <e-column field='userData.file' headerText='Image' textAlign='center' format='C2' width=50></e-column>
+        <e-column field='userData.gender' headerText='Gender' textAlign='center' width=100></e-column>
+        <e-column field='userData.votes' headerText='votes' textAlign='center'width=50>
+        </e-column>
+    </e-columns>
+</ejs-grid>

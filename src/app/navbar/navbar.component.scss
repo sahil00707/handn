@@ -1,0 +1,16 @@
+.navbar{
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ h1{
+    color: white;
+ }   
+ button{
+    padding: 10px 20px;
+    background-color: yellow;
+    border: 1px solid black;
+ }
+}
