@@ -1,12 +1,15 @@
-
-<ejs-grid [dataSource]="tempdata" #grid>
+<ejs-grid [dataSource]="tempdata" #grid [allowSorting]="true" [sortSettings]="sortOption" let i as index>
     <e-columns>
-        <e-column field='id' headerText='No.' textAlign='center' width=50></e-column>
+
+        <e-column field='' headerText='No.' textAlign='center' width=50>
+            <ng-template #template let-data>
+                <p>{{(data.index)| getIndex}}</p>
+            </ng-template>
+        </e-column>
         <e-column field='userData.name' headerText='Name' textAlign='center' width=50></e-column>
         <e-column field='userData.age' headerText='Age' textAlign='center' width=50></e-column>
-        <e-column field='userData.file' headerText='Image' textAlign='center' format='C2' width=50></e-column>
         <e-column field='userData.gender' headerText='Gender' textAlign='center' width=100></e-column>
-        <e-column field='userData.votes' headerText='votes' textAlign='center'width=50>
+        <e-column field='userData.votes' headerText='Votes' textAlign='center' width=50>
         </e-column>
     </e-columns>
 </ejs-grid>

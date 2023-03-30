@@ -1,17 +1,86 @@
 <div class="compare">
-    <div class="card" (click)="vote(userData[0].id,userData[0])">
-        <div class="image">
-            <img src="assets/img/download.jpg" alt="">
+    <div class="card card1">
+        <div class="all-details1" id="all-details1">
+            <button class="close" (click)="hide('all-details1')">
+                <img src="assets/icons/close.png" alt="">
+            </button>
         </div>
-        <button>Details</button>
+        <div class="head">
+            <div class="like_info">
+                <button>
+                    <img src="assets/icons/favorite-3-512.png" alt="">
+                </button>
+
+            </div>
+            <div class="details">
+                <div class="image">
+                    <img src="https://random.imagecdn.app/500/150" alt="">
+                </div>
+                <div class="info">
+                    <h2>{{userData[0].userData.name}}</h2>
+                    <p>{{userData[0].userData.proffesion}}</p>
+                </div>
+                <div class="social-media-icons">
+                    <button>
+                        <img src="assets/icons/facebook-512.png" alt="">
+                    </button>
+                    <button>
+                        <img src="assets/icons/instagram-512.png" alt="">
+                    </button>
+                    <button>
+                        <img src="assets/icons/twitter-512.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <button (click)="showAllDetails('all-details1')">Details</button>
+            <button (click)="vote(userData[0].id,userData[0])">Vote</button>
+        </div>
     </div>
+
     <div class="vs">
-        <h1>VS</h1>
+        <img src="assets/icons/vs.png" alt="">
     </div>
-    <div class="card" (click)="vote(userData[1].id,userData[1])">
-        <div class="image">
-            <img src="assets/img/download.jpg" alt="">
+    <div class="card card2">
+        <div class="all-details2" id="all-details2">
+            <button class="close" (click)="hide('all-details2')">
+                <img src="assets/icons/close.png" alt="">
+            </button>
         </div>
-        <button>Details</button>
+        <div class="head">
+            <div class="like_info">
+                <button>
+                    <img src="assets/icons/favorite-3-512.png" alt="">
+                </button>
+
+            </div>
+            <div class="details">
+                <div class="image">
+                    <img src="{{userData[1].userData.file}}" alt="">
+                </div>
+                <div class="info">
+                    <h2>{{userData[1].userData.name}}</h2>
+                    <p>{{userData[1].userData.proffesion}}</p>
+                </div>
+                <div class="social-media-icons">
+                    <button>
+                        <img src="assets/icons/facebook-512.png" alt="">
+                    </button>
+                    <button>
+                        <img src="assets/icons/instagram-512.png" alt="">
+                    </button>
+                    <button>
+                        <img src="assets/icons/twitter-512.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <button (click)="showAllDetails('all-details2')">Details</button>
+            <button (click)="vote(userData[1].id,userData[1])">Vote</button>
+        </div>
     </div>
+
 </div>
+<router-outlet></router-outlet>

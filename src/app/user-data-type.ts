@@ -5,7 +5,10 @@ export interface UserDataType {
     age:number,
     gender:string,
     file:string,
-    votes:number
+    proffesion:string,
+    votes:number,
+
+
 
 }
 

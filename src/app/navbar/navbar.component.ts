@@ -14,7 +14,7 @@ export class NavbarComponent {
     this.popUp.open(FormComponent)
 
   }
-  constructor(private myserv: MyservService,private popUp: MatDialog) {
+  constructor(private myserv: MyservService,public popUp: MatDialog) {
 
   }
 }

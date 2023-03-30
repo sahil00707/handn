@@ -1,37 +1,243 @@
+button {
+    cursor: pointer;
+}
+
 .compare {
     width: 70vw;
     height: 100vh;
-    //   background-color: red;
     margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -60px;
+
     .card {
-        height: 350px;
-        width: 300px;
-        border: none;
-        box-shadow: 0 0 5px black;
+        width: 260px;
+        height: 390px;
+        background-color: black;
+        padding: 15px 20px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
 
-        .image {
-            height: 90%;
+        .all-details1,.all-details2 {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.3s ease;
+            transform: translateX(-100%);
 
-            img {
+            .close {
+                position: absolute;
+                right: 13px;
+                top: 10px;
+                background-color: transparent;
+                border: none;
+
+                img {
+
+                    width: 20px;
+                    height: 20px;
+                    right: 0;
+                }
+            }
+        }
+.show{
+    transform: translateX(0); 
+}
+
+        .head {
+            height: 270px;
+            width: 100%;
+
+            .like_info {
                 width: 100%;
-                height: 100%;
-                object-fit: contain;
+                display: flex;
+                justify-content: right;
+                //  padding: 10px 25px 10px 0;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    margin-left: 5px;
+
+                    img {
+                        width: 17px;
+                        height: 17px;
+                    }
+                }
             }
 
-            ///  background-color: green;
+            .details {
+                .image {
+                    width: fit-content;
+                    margin: auto;
+                    margin-top: 10px;
+
+                    img {
+                        height: 90px;
+                        width: 90px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                .info {
+                    h2 {
+                        text-align: center;
+                        font-size: 18px;
+                        color: white;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+
+                    p {
+                        margin-top: -20px;
+                        text-align: center;
+                        color: rgb(122, 119, 119);
+                        text-transform: uppercase;
+                        font-size: 12px;
+                    }
+
+                }
+
+                .social-media-icons {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-top: 15px;
+
+                    button {
+                        background-color: teal;
+                        border: 1px solid teal;
+                        height: 55px;
+                        width: 55px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.1s ease;
+
+                        img {
+                            margin: auto;
+                            height: 18px;
+                            width: 18px;
+                        }
+                    }
+
+                    button:hover {
+                        background-color: transparent;
+                        border-color: #fff;
+                    }
+                }
+            }
+
+
         }
 
-        button {
-            width: 100%;
-            padding: 20px 0;
-            background-color: green;
-            color: white;
-            border: none;
+        .body {
+            height: 20%;
+            border-top: 1px solid rgb(160, 158, 158);
+
+            button {
+                width: 100%;
+                background-color: white;
+                font-weight: bolder;
+                padding: 10px 0;
+                border: 1px solid white;
+                border-radius: 27px;
+                margin-top: 20px;
+                transition: 0.3s ease;
+            }
+
+            button:hover {
+                background-color: transparent;
+                color: white;
+            }
+
         }
 
-        // background-color: black;
+    }
+
+    .card1 {
+        animation: sliderRight 0.6s ease-in;
+    }
+
+    .card2 {
+        animation: sliderLeft 0.6s ease-in;
+    }
+
+    @keyframes sliderRight {
+        0% {
+            transform: translateX(-400px);
+        }
+
+        60% {
+            transform: translateX(70px);
+        }
+
+        75% {
+            transform: translateX(-50px);
+        }
+
+        85% {
+            transform: translateX(10px);
+        }
+
+        95% {
+            transform: translateX(-10px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes sliderLeft {
+        0% {
+            transform: translateX(400px);
+        }
+
+        60% {
+            transform: translateX(-70px);
+        }
+
+        75% {
+            transform: translateX(50px);
+        }
+
+        85% {
+            transform: translateX(-10px);
+        }
+
+        95% {
+            transform: translateX(10px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .vs {
+        img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        animation: fichuk 0.6s ease-in;
+    }
+
+    @keyframes fichuk {
+        0% {
+            transform: perspective(500px) translateZ(400px);
+        }
+
+        100% {
+            transform: translateZ(0);
+        }
     }
 }

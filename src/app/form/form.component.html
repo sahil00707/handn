@@ -1,24 +1,28 @@
 <div class="form">
     <form #myFormData="ngForm">
         <h1>Register</h1>
-        <input type="text" placeholder="Enter Your Name" ngModel name="name">
-        <input type="email" placeholder="Enter Your Email" ngModel name="email">
-        <input type="number" placeholder="Enter Your Mobile Number" ngModel name="number">
-        <input type="number" name="age" id="age" placeholder="Enter Your Age" ngModel name="age">
-        <div class="gender">
-            <label for="male">
-                <p>Male</p>
-                <input type="radio" id="male" ngModel name="gender" value="male">
-            </label>
-            <label for="female">
-                <p>Female</p>
-                <input type="radio" id="female" ngModel name="gender" value="female">
-            </label>
-        </div>
-        <input type="file" name="image" id="image" ngModel name="file">
+        <input required type="text" placeholder="Enter Your Name" ngModel name="name">
+        <input required type="email" placeholder="Enter Your Email" ngModel name="email">
+        <input required type="number" placeholder="Enter Your Mobile Number" ngModel name="number">
+        <input  required type="number" name="age" id="age" placeholder="Enter Your Age" ngModel name="age">
+        <select name="gender" id="gender" ngModel>
+            <option value="">Select Your Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <select name="proffesion" id="proffesion" ngModel>
+            <option  value="">Select Your Proffession</option>
+            <option  value="Software Engineer">Software Engineer</option>
+            <option  value="Doctor">Doctor</option>
+            <option  value="Pilot">Pilot</option>
+            <option  value="Actor">Actor</option>
+            <option  value="Teacher">Teacher</option>
+            <option  value="Manager">Manager</option>
+        </select>
         <div class="btns">
-            <button>Cancel</button>
-            <button (click)="addData(myFormData.value)">Add Data</button>
+            <button (click)="closePopUp()">Cancel</button>
+            <button [disabled]="!myFormData.valid" (click)="addData(myFormData.value)">Add Data</button>
         </div>
     </form>
+
 </div>

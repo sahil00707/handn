@@ -13,8 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CompareComponent } from './compare/compare.component';
-import { LeaderboardComponent } from './leaderboard/leaderboard.component';
-import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids'
+import { LeaderboardComponent } from './leaderboard/leaderboard.component'
+import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
+import { GetIndexPipe } from './get-index.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,8 @@ import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids'
     NavbarComponent,
     CompareComponent,
     LeaderboardComponent,
+    GetIndexPipe,
+  
     
   ],
   imports: [
@@ -36,7 +39,8 @@ import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids'
     FormsModule,
     MatFormFieldModule,
     HttpClientModule,
-    GridModule, PagerModule
+    GridModule,
+    PagerModule
     
   ],
   providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}],
